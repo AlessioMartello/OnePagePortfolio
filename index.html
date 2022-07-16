@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!--Font awesome CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6a81b3df7a.js" crossorigin="anonymous"></script>
+    <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <!--  Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Alessio's Portfolio</title>
+  </head>
+  <body onclick="changeColour()" style="background-color=white;">
+<!--  Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="myNav">
+  <a class="navbar-brand" href="#">
+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+    <li class="nav-item active">
+        <a class="nav-link" href="mailto:alessiomartello@hotmail.co.uk"><i class="fa fa-envelope fa-3x" ></i></a>
+      </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="Alessio Martello CV.pdf" download="Alessio Martello CV"><i class="fa fa-file fa-3x"></i></a>
+    <li class="nav-item active">
+        <a class="nav-link" href="https://github.com/AlessioMartello" target="_blank" rel="noopener noreferrer"><i class="fa fa-github fa-3x"></i></a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="https://www.linkedin.com/in/alessiomartello/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin fa-3x"></i></a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="https://stackoverflow.com/users/13281532/aless" target="_blank" rel="noopener noreferrer"><i class="fa fa-stack-overflow fa-3x"></i></a>
+    </li>
+    </ul>
+  </div>
+</nav>
+
+    <!-- Hero -->
+<div class="text-center rounded-3 full-height" style="background-color:#7026b9; padding-bottom:5rem;">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white" id="app" style="width:80%;font-size:4rem"></div>
+    </div>
+    <div class="scroll-btn text-center align-items-center">
+        <div><button onclick="scrollButton(1)" id="myBtn" style="background-color:transparent; border:none;"><span id="btnSpan" style="color:#e1ad01">
+            <i class="fas fa-folder-open fa-3x"></i>
+        </span>
+            </button>
+        </div>
+        <div><p style="color:#e1ad01">
+            <b>Projects</b>
+        </p></div>
+    </div>
+
+</div>
+
+
+<!--  Projects-->
+<div class="full-height carouselDiv">
+   <!-- slider container -->
+    <div class="slider">
+
+      <!-- slide 1 -->
+      <div class="slide">
+          <div class="container">
+
+          </div>
+        <img
+          src="https://source.unsplash.com/random?landscape,mountain"
+          alt=""
+        />
+      </div>
+
+       <!-- slide 2 -->
+      <div class="slide">
+        <img src="https://source.unsplash.com/random?landscape,cars" alt="" />
+      </div>
+
+       <!-- slide 3 -->
+      <div class="slide">
+        <img src="https://source.unsplash.com/random?landscape,night" alt="" />
+      </div>
+
+       <!-- slide 4 -->
+      <div class="slide">
+        <img src="https://user-images.githubusercontent.com/45970352/176474976-eeb77e66-730b-49e3-aebf-eef7ba3dbde5.gif" alt="" />
+      </div>
+
+       <!-- Control buttons -->
+      <button class="btn btn-next" style="background-color:transparent;">
+          <i class="fas fa-angle-right fa-3x" style="color:#e1ad01">
+            </i></button>
+      <button class="btn btn-prev" style="background-color:transparent;">
+          <i class="fas fa-angle-left fa-3x" style="color:#e1ad01">
+            </i></button>    </div>
+
+    <div class="scroll-btn text-center align-items-center">
+        <div><button onclick="scrollButton(2)" style="background-color:transparent; border:none;">
+        <span style="color:#e1ad01">
+           <i class="fas fa-angle-down fa-3x"></i>
+        </span>
+            </button>
+        </div>
+        <div><p style="color:#e1ad01">
+            <b>Page down</b>
+        </p></div>
+    </div>
+
+</div>
+
+<!-- Skills-->
+<div class="full-height" id="skills">
+</div>
+
+<!-- Social Media -->
+
+
+    <div class="scroll-btn text-center align-items-center">
+        <div><button onclick="pageTop()" style="background-color:transparent; border:none;">
+        <span style="color:#e1ad01">
+           <i class="fas fa-angle-up fa-3x"></i>
+        </span>
+            </button>
+        </div>
+        <div><p style="color:#e1ad01">
+            <b>Page top</b>
+        </p></div>
+    </div>
+  </body>
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script src="scripts.js"></script>
+
+</html>

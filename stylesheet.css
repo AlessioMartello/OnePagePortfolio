@@ -1,0 +1,105 @@
+a:link {
+  color: #e1ad01;
+}
+a{
+  color: #e1ad01;
+}
+a:hover{
+  color: #e1ad01;
+}
+
+.text-white{
+    font-size:100px;
+}
+
+.navbar{
+    background-color:rgba(0,0,0,0.5);
+    opacity:0;
+}
+
+.full-height{
+    height: 100vh;
+    width:100%;
+}
+
+.navbar:hover { opacity: 1 !important;
+ -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+    }
+
+#myBtn{
+    opacity:0;
+}
+
+carouselDiv {
+  display: grid;
+  place-items: center;
+}
+
+.slider {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.slide img {
+    width:100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+.btn:active {
+  transform: scale(1.1);
+}
+
+.btn-prev {
+  top: 45%;
+  left: 2%;
+}
+
+.btn-next {
+  top: 45%;
+  right: 2%;
+}
+
+#navbarNav{
+justify-content: space-evenly;
+}
+
+.fa{
+    margin-left:2rem;
+    margin-right:2rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #e1ad01;
+  transition-duration: 1s;
+}
+
+.btn.focus, .btn:focus {
+outline:0;
+box-shadow: none;;
+}
