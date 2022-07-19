@@ -1,3 +1,11 @@
+body{
+    background-color:#7026b9;
+}
+
+.button.focus, .button:focus {
+    outline:0;;
+}
+
 a:link {
   color: #e1ad01;
 }
@@ -31,9 +39,10 @@ a:hover{
     opacity:0;
 }
 
-carouselDiv {
+.carouselDiv {
   display: grid;
   place-items: center;
+  position:relative;
 }
 
 .slider {
@@ -101,5 +110,23 @@ justify-content: space-evenly;
 
 .btn.focus, .btn:focus {
 outline:0;
-box-shadow: none;;
+box-shadow: none;
+}
+
+#skills{
+overflow-x:hidden;
+}
+
+.inView{
+opacity: 1 !important;
+  transition: opacity 1s ease-in-out;
+}
+
+.outView{
+opacity: 0 !important;
+  transition: opacity 1s ease-in-out;
+}
+
+.experience:hover {
+  transform: skew(-20deg);
 }

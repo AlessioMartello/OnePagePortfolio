@@ -1,23 +1,24 @@
 
-// Navbar appear on scroll
-window.addEventListener('scroll', function(e) {
-  var navBar = document.getElementById('myNav');
-  var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-  navBar.style.opacity = Math.min(1, (scroll+1) / 1000);
-});
+//// Navbar appear on scroll
+//window.addEventListener('scroll', function(e) {
+//  var navBar = document.getElementById('myNav');
+//  var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+//  navBar.style.opacity = Math.min(1, (scroll+1) / 1000);
+//});
 
 
 // Page down functionality
 function scrollButton (num){
     let intFrameHeight = window.innerHeight || top.innerHeight || 1000;
     intFrameHeight *=num
+    console.log(intFrameHeight)
     window.scrollTo({ top: intFrameHeight, behavior: 'smooth' });
 }
 
 
 // Page down fade in functionality
 window.onload = function() {
-  setTimeout(fade, 10);
+  setTimeout(fade, 20000);
 }
 
 function fade (){
@@ -119,7 +120,7 @@ typewriter
   .pauseFor(1000)
   .typeString('<br>My <a href="Alessio Martello CV.pdf" download="Alessio Martello CV">CV</a> is <em>really</em> nice also...')
   .pauseFor(1000)
-  .typeString('<br><span style="font-size:2rem">P.s. I made this site myself</span>')
+  .typeString('<br><span style="font-family: Dancing Script, cursive;">P.s. I made this site myself</span>')
   .start();
   }
 else if (visited !== 'true'){
@@ -137,12 +138,72 @@ typewriter
   .deleteChars(17)
   .typeString('<span style="color: #3d79aa;"><em>Self-taught </em></span><span style="color:#ffde57;">Python programmer</span>')
   .pauseFor(500)
-  .typeString('<br>& <span style="font-family: Dancing Script, cursive;">Web-development enthusiast.</span>')
+  .typeString('<br>& <span style="font-family: Dancing Script, cursive;font-size: 3rem;">Web-development enthusiast.</span>')
   .start();
   }
 
-console.log(visited)
 
+// Horizontal scroll in text
+const scrollerRight = document.getElementById("scrollerRight");
+const scrollerLeft = document.getElementById("scrollerLeft");
+let origShift = window.innerHeight
 
+scrollerRight.style.transform = `translateX(${origShift}px)`;
+scrollerLeft.style.transform = `translateX(${-origShift}px)`;
 
+const animate = (element,position) => {
+     element.style.transform = `translateX(${position}px)`
+};
 
+document.addEventListener('scroll', function(e) {
+   window.requestAnimationFrame(function() {
+      animate(scrollerRight,origShift-scrollY/2);
+    });
+});
+
+document.addEventListener('scroll', function(e) {
+   window.requestAnimationFrame(function() {
+      animate(scrollerLeft,-origShift+scrollY/2)
+    });
+});
+
+// todo try stop scroll beyond center
+
+window.addEventListener('scroll', fader );
+function fader() {
+        fadeIn();
+        fadeOut();
+}
+
+function fadeIn (){
+var distInView = scrollerRight.getBoundingClientRect().top - window.innerHeight +20;
+        if (distInView < 0) {
+            scrollerRight.classList.add("inView");
+            scrollerLeft.classList.add("inView");
+        }
+        else {
+            scrollerRight.classList.remove("inView");
+            scrollerLeft.classList.remove("inView");
+        }
+}
+function fadeOut(){
+        if (scrollerRight.getBoundingClientRect().top >= window.innerHeight/2) {
+            scrollerRight.classList.add("outView");
+            scrollerLeft.classList.add("outView");
+        }
+        else{
+            scrollerRight.classList.remove("outView");
+            scrollerLeft.classList.remove("outView");
+
+        }
+}
+
+function getAge(){
+    const bday = new Date("03/23/1996");
+    let tday = new Date();
+    time_diff = tday - bday; //in milliseconds
+    day_diff = time_diff / (1000*3600*24);
+    let age = Math.floor(day_diff/365);
+    document.getElementById('myAge').innerHTML = age;
+}
+getAge()

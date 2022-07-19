@@ -23,7 +23,7 @@
 
     <title>Alessio's Portfolio</title>
   </head>
-  <body onclick="changeColour()" style="background-color=white;">
+  <body onclick="changeColour()">
 <!--  Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="myNav">
   <a class="navbar-brand" href="#">
@@ -52,12 +52,12 @@
 </nav>
 
     <!-- Hero -->
-<div class="text-center rounded-3 full-height" style="background-color:#7026b9; padding-bottom:5rem;">
+<div class="text-center rounded-3 full-height" style="padding-bottom:5rem;">
     <div class="d-flex justify-content-center align-items-center h-100">
       <div class="text-white" id="app" style="width:80%;font-size:4rem"></div>
     </div>
-    <div class="scroll-btn text-center align-items-center">
-        <div><button onclick="scrollButton(1)" id="myBtn" style="background-color:transparent; border:none;"><span id="btnSpan" style="color:#e1ad01">
+    <div class="scroll-btn text-center align-items-center" id="myBtn">
+        <div><button class="button" onclick="scrollButton(1)" style="background-color:transparent; border:none;"><span id="btnSpan" style="color:#e1ad01">
             <i class="fas fa-folder-open fa-3x"></i>
         </span>
             </button>
@@ -77,9 +77,6 @@
 
       <!-- slide 1 -->
       <div class="slide">
-          <div class="container">
-
-          </div>
         <img
           src="https://source.unsplash.com/random?landscape,mountain"
           alt=""
@@ -88,7 +85,10 @@
 
        <!-- slide 2 -->
       <div class="slide">
-        <img src="https://source.unsplash.com/random?landscape,cars" alt="" />
+          <div>
+                      <img src="https://source.unsplash.com/random?landscape,cars" alt="" />
+
+          </div>
       </div>
 
        <!-- slide 3 -->
@@ -109,8 +109,8 @@
           <i class="fas fa-angle-left fa-3x" style="color:#e1ad01">
             </i></button>    </div>
 
-    <div class="scroll-btn text-center align-items-center">
-        <div><button onclick="scrollButton(2)" style="background-color:transparent; border:none;">
+    <div class="scroll-btn text-center align-items-center" style="position:absolute; bottom:0;">
+        <div><button class="button" onclick="scrollButton(2)" style="background-color:transparent; border:none;">
         <span style="color:#e1ad01">
            <i class="fas fa-angle-down fa-3x"></i>
         </span>
@@ -124,14 +124,56 @@
 </div>
 
 <!-- Skills-->
-<div class="full-height" id="skills">
+<div class="" id="skills" onscroll="myFunctio()" style="color:white">
+    <div class="container pt-5" id="scrollerRight" style="opacity:0;">
+        <h2>About me</h2><br>
+        <h4>
+            <p>I’m <span id="myAge"></span> and I’m a self-taught programmer. I work as a Senior Cloud Data Engineer & Technical Consultant in the Private Equity industry. I lead end to end data migrations to the cloud.</p>
+        <p>In my spare time I love to learn and teach myself backend and frontend development programming skills.<br>
+            <p>I like to make useful products and tools, including my online art store and personal financial planner.</p>
+        </h4>
+    </div>
+    <div class="container pt-0" id="scrollerLeft">
+        <h4>
+            <p>My tech stack:</p>
+
+        Back end
+            <ul>
+                <li class="experience">Python (Pandas, Requests, Python-Dash)</li>
+                <li class="experience">SQL (Data warehousing, Stored Procedures)</li>
+                <li class="experience">Azure Cloud Infrastructure Administration</li>
+            </ul>
+
+
+        Front end
+            <ul>
+                <li class="experience">HTML, CSS, Bootstrap</li>
+                <li class="experience">JavaScript (This very website)</li>
+                <li class="experience">Python (Django, Selenium & BeautifulSoup)</li>
+                <li class="experience">Power BI & DAX</li>
+            </ul>
+
+
+        Cloud
+            <ul>
+                <li class="experience">    Azure Cloud computing (Azure Data Factory, Azure Blob Storage, Logic Apps, Azure SQL databases, Azure Functions)</li>
+                <li class="experience">    Microsoft Certified Azure Data Engineer Associate</li>
+                <li class="experience">    Heroku</li>
+                <li class="experience">    Google Drive API</li>
+                <li class="experience">    Matllion</li>
+                <li class="experience">    Snowflake</li>
+            </ul>
+
+
+        </h4>
+    </div>
 </div>
 
 <!-- Social Media -->
 
-
+<!--Scroll top button-->
     <div class="scroll-btn text-center align-items-center">
-        <div><button onclick="pageTop()" style="background-color:transparent; border:none;">
+        <div><button class="button" onclick="pageTop()" style="background-color:transparent; border:none;">
         <span style="color:#e1ad01">
            <i class="fas fa-angle-up fa-3x"></i>
         </span>
