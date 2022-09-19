@@ -207,3 +207,14 @@ function getAge(){
     document.getElementById('myAge').innerHTML = age;
 }
 getAge()
+
+$('.change').on("click", function()
+    {
+    $("body").toggleClass("dark-mode");
+    $("#moon").toggleClass("moon-class");
+    $("#sun").toggleClass("sun-class");
+
+    }
+
+)
+

@@ -6,9 +6,7 @@ body{
     outline:0;;
 }
 
-a:link {
-  color: #e1ad01;
-}
+
 a{
   color: #e1ad01;
 }
@@ -62,9 +60,7 @@ a:hover{
 }
 
 .slide img {
-    width:100vw;
-  height: 100vh;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .btn {
@@ -127,6 +123,37 @@ opacity: 0 !important;
   transition: opacity 1s ease-in-out;
 }
 
-.experience:hover {
-  transform: skew(-20deg);
+#aboutMe{
+padding-top:2rem;
+text-align:center;
+font-family: Dancing Script, cursive;
+font-size:3rem;
+}
+
+.artlessiHeader{
+font-family:Sofia;font-weight:bold;font-size:6rem;}
+
+a:hover {
+text-decoration: none;
+}
+
+.whitey{
+color:white;
+}
+
+.dark-mode{
+    background-color:black;
+}
+
+.sun-class{
+    display:block !important;
+}
+
+.moon-class{
+    display:none;
+}
+
+.change, i:hover{
+    cursor: pointer;
+    color:#e1ad01 !important;
 }
