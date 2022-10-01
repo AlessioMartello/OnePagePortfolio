@@ -111,6 +111,8 @@ box-shadow: none;
 
 #skills{
 overflow-x:hidden;
+font-family: 'Epilogue', sans-serif;
+
 }
 
 .inView{
@@ -126,8 +128,9 @@ opacity: 0 !important;
 #aboutMe{
 padding-top:2rem;
 text-align:center;
-font-family: Dancing Script, cursive;
+font-family: 'Cherry Swash', cursive;
 font-size:3rem;
+
 }
 
 .artlessiHeader{
@@ -139,6 +142,10 @@ text-decoration: none;
 
 .whitey{
 color:white;
+padding-bottom: 1rem ;
+padding-top: 1rem;
+font-family: 'Epilogue', sans-serif;
+
 }
 
 .dark-mode{
@@ -156,4 +163,35 @@ color:white;
 .change, i:hover{
     cursor: pointer;
     color:#e1ad01 !important;
+}
+
+#getInTouch{
+  background-color: #e1ad01; /* yellow */
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  border-radius: 1rem;
+  transition-duration: 0.7s;
+  font-weight:bold;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+#getInTouch:hover {
+  background-color: white;
+  color:#e1ad01;
+  font-size: larger;
+  box-shadow: 0 20px 20px 0 rgba(0,0,0,0.5), 0 30px 70px 0 rgba(0,0,0,0.59);
+}
+
+.nav-link{
+  display: contents;
+}
+
+.gif{
+  box-shadow: 0 20px 20px 0 rgba(0,0,0,0.5), 0 30px 70px 0 rgba(0,0,0,0.59);
 }
